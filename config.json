@@ -1,0 +1,17 @@
+{
+    "tts": {
+        "base": "https://api.siliconflow.cn/v1",
+        "api_key": "",
+        "model": "FunAudioLLM/CosyVoice2-0.5B",
+        "voice": "FunAudioLLM/CosyVoice2-0.5B:diana",
+        "response_format": "mp3"
+    },
+    "chat": {
+        "base": "https://api.openai.com/v1",
+        "api_key": "",
+        "model": "",
+        "temperature": 0.7,
+        "system_prompt": "你叫吒儿，性格参考<魔童降世>中的哪吒。",
+        "user_prompt": "请回答以下问题：{question}"
+    }
+} 
