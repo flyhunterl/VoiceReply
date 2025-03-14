@@ -29,8 +29,7 @@
 2. 重启应用程序
 
 ## 语音消息配置
-
-> 以下源码修改方案来源于：SearchMusic 部署教程
+> 以下源码修改方案来源于：[SearchMusic 部署教程](https://rq4rfacax27.feishu.cn/wiki/L4zFwQmbKiZezlkQ26jckBkcnod?fromScene=spaceOverview)
 
 需要对 gewechat 源码进行以下修改：
 
