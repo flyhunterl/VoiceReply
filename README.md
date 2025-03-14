@@ -4,7 +4,7 @@
 
 这是一个支持语音问答的插件，用户可以通过发送"语音+问题"的形式获取AI的语音回答。
 
-如果想使用免费TTS服务 可以查看本项目的分支 [VoicereplyFree](https://github.com/flyhunterl/VoiceReplyFree))
+如果想使用免费TTS服务 可以查看本项目的分支 [VoiceReplyFree](https://github.com/flyhunterl/VoiceReplyFree))
 
 ## 功能特点
 
