@@ -173,14 +173,13 @@ def mp3_to_silk(mp3_path: str, silk_path: str) -> int:
 2. 生成的语音文件为空时会自动清理并返回错误信息
 3. 配置文件加载失败时会使用默认配置
 
-## 鸣谢
 
 ## 鸣谢
 - [dify-on-wechat](https://github.com/hanfangyuan4396/dify-on-wechat) - 本项目的基础框架
 - [SearchMusic](https://github.com/Lingyuzhou111/SearchMusic) - 项目思路来源
 - [Gewechat](https://github.com/Devo919/Gewechat) - 微信机器人框架，个人微信二次开发的免费开源框架 
 
-## 打赏
+
 ## 打赏
 
 如果您觉得这个项目对您有帮助，欢迎打赏支持作者继续维护和开发更多功能！
