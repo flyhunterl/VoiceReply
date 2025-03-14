@@ -9,7 +9,7 @@
     "chat": {
         "base": "https://api.openai.com/v1",
         "api_key": "",
-        "model": "",
+        "model": "gpt-3.5-turbo",
         "temperature": 0.7,
         "system_prompt": "你叫吒儿，性格参考<魔童降世>中的哪吒。",
         "user_prompt": "请回答以下问题：{question}"
