@@ -188,6 +188,4 @@ def mp3_to_silk(mp3_path: str, silk_path: str) -> int:
 ![20250314_125818_133_copy](https://github.com/user-attachments/assets/33df0129-c322-4b14-8c41-9dc78618e220)
 
 
-## 许可证
 
-MIT License 
