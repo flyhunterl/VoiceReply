@@ -1,6 +1,6 @@
 # VoiceReply 语音问答插件
 
-> 本项目是 dify-on-wechat 的插件项目，用于以语音方式回答用户问题。项目思路来源于 WordQuery 项目，特此感谢。
+> 本项目是 dify-on-wechat 的插件项目，用于以语音方式回答用户问题。项目思路来源于  [SearchMusic](https://github.com/Lingyuzhou111/SearchMusic)  项目，特此感谢。
 
 这是一个支持语音问答的插件，用户可以通过发送"语音+问题"的形式获取AI的语音回答。
 
