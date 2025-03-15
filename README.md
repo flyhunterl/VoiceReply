@@ -183,9 +183,87 @@ def mp3_to_silk(mp3_path: str, silk_path: str) -> int:
 
 ## 打赏
 
-如果您觉得这个项目对您有帮助，欢迎打赏支持作者继续维护和开发更多功能！
+185
+186
+187
+188
+189
+190
+191
+192
+# VoiceReply 语音问答插件
+            pilk.encode(pcm_path, silk_path, pcm_rate=32000, tencent=True, complexity=2)
+            duration = pilk.get_duration(silk_path)
+            if duration <= 0:
+                raise Exception("Invalid SILK duration")
+            return duration
+        finally:
+            if os.path.exists(pcm_path):
+                try:
+                    os.remove(pcm_path)
+                except Exception as e:
+                    logger.warning(f"[audio_convert] 清理PCM文件失败: {e}")
+    except Exception as e:
+        logger.error(f"[audio_convert] MP3转SILK失败: {e}")
+        return 0
+```
 
+这些修改将提供以下优化：
+
+1. 支持语音消息的自动分段发送
+2. 提高音频转换质量
+3. 自动清理临时文件
+4. 优化发送间隔
+
+## 配置说明
+
+在使用插件之前，需要在`config.json`中配置以下参数：
+
+1. TTS（文本转语音）配置：
+```json
+{
+    "base": "https://api.siliconflow.cn/v1",
+    "api_key": "your_tts_api_key_here",
+    "model": "FunAudioLLM/CosyVoice2-0.5B",
+    "voice": "FunAudioLLM/CosyVoice2-0.5B:diana",
+    "response_format": "mp3"
+}
+```
+
+2. Chat（对话）配置：
+```json
+{
+    "base": "https://api.openai.com/v1",
+    "api_key": "your_chat_api_key_here",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.7
+}
+```
+
+## 注意事项
+
+1. 使用前请确保已正确配置API密钥
+2. 语音生成可能需要一定时间，请耐心等待
+3. 如果语音生成失败，插件会自动返回文字回答
+
+## 错误处理
+
+1. API请求失败时会自动重试3次
+2. 生成的语音文件为空时会自动清理并返回错误信息
+3. 配置文件加载失败时会使用默认配置
+
+
+## 鸣谢
+- [dify-on-wechat](https://github.com/hanfangyuan4396/dify-on-wechat) - 本项目的基础框架
+- [SearchMusic](https://github.com/Lingyuzhou111/SearchMusic) - 项目思路来源
+- [Gewechat](https://github.com/Devo919/Gewechat) - 微信机器人框架，个人微信二次开发的免费开源框架 
+
+
+## 打赏
+
+**您的打赏能让我在下一顿的泡面里加上一根火腿肠。**
 ![20250314_125818_133_copy](https://github.com/user-attachments/assets/33df0129-c322-4b14-8c41-9dc78618e220)
+
 
 
 
