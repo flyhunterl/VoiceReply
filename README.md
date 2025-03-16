@@ -181,40 +181,6 @@ def mp3_to_silk(mp3_path: str, silk_path: str) -> int:
 - [Gewechat](https://github.com/Devo919/Gewechat) - 微信机器人框架，个人微信二次开发的免费开源框架 
 
 
-## 打赏
-
-185
-186
-187
-188
-189
-190
-191
-192
-# VoiceReply 语音问答插件
-            pilk.encode(pcm_path, silk_path, pcm_rate=32000, tencent=True, complexity=2)
-            duration = pilk.get_duration(silk_path)
-            if duration <= 0:
-                raise Exception("Invalid SILK duration")
-            return duration
-        finally:
-            if os.path.exists(pcm_path):
-                try:
-                    os.remove(pcm_path)
-                except Exception as e:
-                    logger.warning(f"[audio_convert] 清理PCM文件失败: {e}")
-    except Exception as e:
-        logger.error(f"[audio_convert] MP3转SILK失败: {e}")
-        return 0
-```
-
-这些修改将提供以下优化：
-
-1. 支持语音消息的自动分段发送
-2. 提高音频转换质量
-3. 自动清理临时文件
-4. 优化发送间隔
-
 ## 配置说明
 
 在使用插件之前，需要在`config.json`中配置以下参数：
